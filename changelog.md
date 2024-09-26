@@ -8,5 +8,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2024-09-26
 
 ### Added
-- Add file name.txt
+- Add file index.html
 - Add Changlog file

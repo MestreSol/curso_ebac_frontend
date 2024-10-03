@@ -4,13 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    input{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+    }
+    #submit{
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    #submit:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    #submit:active{
+        background-color: #000;
+        color: #fff;
+    }
+    #submit:focus{
+        outline: none;
+    }
+    #valueA{
+        width: 200px;
+    }
+    #valueB{
+        width: 200px;
+    }
+    #result{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+    }
+    #result h1{
+        margin: 0;
+    }
+    #result p{
+        margin: 0;
+    }
+    #result span{
+        font-weight: bold;
+    }
+    #result button{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+    #result button:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    #result button:active{
+        background-color: #000;
+        color: #fff;
+    }
+    #result button:focus{
+        outline: none;
+    }
+    #result button:disabled{
+        background-color: #ccc;
+        color: #000;
+        cursor: not-allowed;
+    }
+    #result button:disabled:hover{
+        background-color: #ccc;
+        color: #000;
+    }
+    #result button:disabled:active
+</style>
 </head>
 <body>
     <form method="get" >
         <input type="number" name="num1" placeholder="Enter first number" id="valueA">
         <input type="number" name="num2" placeholder="Enter second number" id="valueA">
-        <button type="submit" value="submit">
+        <input type="submit" value="submit" id="submit">
     </form>
 </body>
 <script src="main.js"></script>

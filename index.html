@@ -1,134 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <!-- Charset configure -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS Import -->
-    <link rel="stylesheet" href="index.css">
-
-    <!-- Fonts Import -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- Title -->
-    <title>Exercico CSS</title>
+    <title>Document</title>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="nav nav-menu bg-dark top-0 m-0 ">
-            <!-- Site Name -->
-            <h1 class="ml-2">
-                <a href="#" class="text-white">Site</a>
-            </h1>
-            <!-- Menu -->
-            <ul>
-                <li><a href="#" class="text-white">Home</a></li>
-                <li><a href="#" class="text-white">Ciencia</a></li>
-                <li><a href="#" class="text-white">Jogos</a></li>
-                <li><a href="#" class="text-white">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Main -->
-    <main class="container">
-        <!-- Notice Area -->
-        <div>
-            <h2 class="session-name">Ciencia</h2>
-            <div class="content-session">
-                <div class="card-list">
-                    <!-- Notice card -->
-                    <div class="card">
-                        <div class="card-header">
-                            <img src="https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg" class="notice-img card-img"/>
-                        </div>
-                        <div class="card-body">
-                            <h3>Elon Musk Cells</h3>
-                            <p class="notice-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis erat tellus, et accumsan nibh congue et. Pellentesque porttitor, tellus at malesuada euismod, neque ligula suscipit velit, pretium semper augue turpis porttitor massa. Aenean tortor nunc, iaculis et ex eget, aliquet viverra ligula. Aliquam enim justo, sollicitudin at ante sed, tincidunt ultricies arcu. Curabitur non erat et ligula dignissim consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ante ipsum, dapibus nec blandit quis, condimentum ac sapien. Duis blandit odio quis eros varius malesuada non at elit. Praesent mollis enim id ante tempus, vel cursus libero mollis. Integer eleifend risus a ex efficitur mattis. Integer quis quam maximus, lobortis orci a, malesuada quam. In hac habitasse platea dictumst.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary readmore">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <img src="data:image/png;base64,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" class="notice-img card-img"/>
-                        </div>
-                        <div class="card-body">
-                            <h3>Git²</h3>
-                            <p class="notice-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis erat tellus, et accumsan nibh congue et. Pellentesque porttitor, tellus at malesuada euismod, neque ligula suscipit velit, pretium semper augue turpis porttitor massa. Aenean tortor nunc, iaculis et ex eget, aliquet viverra ligula. Aliquam enim justo, sollicitudin at ante sed, tincidunt ultricies arcu. Curabitur non erat et ligula dignissim consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ante ipsum, dapibus nec blandit quis, condimentum ac sapien. Duis blandit odio quis eros varius malesuada non at elit. Praesent mollis enim id ante tempus, vel cursus libero mollis. Integer eleifend risus a ex efficitur mattis. Integer quis quam maximus, lobortis orci a, malesuada quam. In hac habitasse platea dictumst.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary readmore">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" class="notice-img card-img"/>
-                        </div>
-                        <div class="card-body">
-                            <h3>The C--</h3>
-                            <p class="notice-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis erat tellus, et accumsan nibh congue et. Pellentesque porttitor, tellus at malesuada euismod, neque ligula suscipit velit, pretium semper augue turpis porttitor massa. Aenean tortor nunc, iaculis et ex eget, aliquet viverra ligula. Aliquam enim justo, sollicitudin at ante sed, tincidunt ultricies arcu. Curabitur non erat et ligula dignissim consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ante ipsum, dapibus nec blandit quis, condimentum ac sapien. Duis blandit odio quis eros varius malesuada non at elit. Praesent mollis enim id ante tempus, vel cursus libero mollis. Integer eleifend risus a ex efficitur mattis. Integer quis quam maximus, lobortis orci a, malesuada quam. In hac habitasse platea dictumst.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary readmore">Leia mais</a>
-                        </div>
-                    </div>
-                    
-                </div>
-                </div>
-            </div>
-            <div>
-                <h2 class="session-name">Games</h2>
-                <div class="content-session">
-                    <div class="card-list">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="https://preview.redd.it/primeiro-fifa-v0-bn3br46up94d1.jpeg?auto=webp&s=1420552bf28ffe9f24cb08eeaaf34ea9efc64599" class="notice-img card-img"/>
-                            </div>
-                            <div class="card-body">
-                                <h3>FIFA 1</h3>
-                                <p class="notice-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis erat tellus, et accumsan nibh congue et. Pellentesque porttitor, tellus at malesuada euismod, neque ligula suscipit velit, pretium semper augue turpis porttitor massa. Aenean tortor nunc, iaculis et ex eget, aliquet viverra ligula. Aliquam enim justo, sollicitudin at ante sed, tincidunt ultricies arcu. Curabitur non erat et ligula dignissim consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ante ipsum, dapibus nec blandit quis, condimentum ac sapien. Duis blandit odio quis eros varius malesuada non at elit. Praesent mollis enim id ante tempus, vel cursus libero mollis. Integer eleifend risus a ex efficitur mattis. Integer quis quam maximus, lobortis orci a, malesuada quam. In hac habitasse platea dictumst.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary readmore">Leia mais</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="https://www.riotgames.com/darkroom/1440/8d5c497da1c2eeec8cffa99b01abc64b:5329ca773963a5b739e98e715957ab39/ps-f2p-val-console-launch-16x9.jpg" class="notice-img card-img"/>
-                            </div>
-                            <div class="card-body">
-                                <h3>Valorant X CS2</h3>
-                                <p class="notice-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis erat tellus, et accumsan nibh congue et. Pellentesque porttitor, tellus at malesuada euismod, neque ligula suscipit velit, pretium semper augue turpis porttitor massa. Aenean tortor nunc, iaculis et ex eget, aliquet viverra ligula. Aliquam enim justo, sollicitudin at ante sed, tincidunt ultricies arcu. Curabitur non erat et ligula dignissim consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ante ipsum, dapibus nec blandit quis, condimentum ac sapien. Duis blandit odio quis eros varius malesuada non at elit. Praesent mollis enim id ante tempus, vel cursus libero mollis. Integer eleifend risus a ex efficitur mattis. Integer quis quam maximus, lobortis orci a, malesuada quam. In hac habitasse platea dictumst.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary readmore">Leia mais</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="https://i.redd.it/g51xkj8n3sac1.jpeg" class="notice-img card-img"/>
-                            </div>
-                            <div class="card-body">
-                                <h3>Skyrim²</h3>
-                                <p class="notice-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis erat tellus, et accumsan nibh congue et. Pellentesque porttitor, tellus at malesuada euismod, neque ligula suscipit velit, pretium semper augue turpis porttitor massa. Aenean tortor nunc, iaculis et ex eget, aliquet viverra ligula. Aliquam enim justo, sollicitudin at ante sed, tincidunt ultricies arcu. Curabitur non erat et ligula dignissim consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ante ipsum, dapibus nec blandit quis, condimentum ac sapien. Duis blandit odio quis eros varius malesuada non at elit. Praesent mollis enim id ante tempus, vel cursus libero mollis. Integer eleifend risus a ex efficitur mattis. Integer quis quam maximus, lobortis orci a, malesuada quam. In hac habitasse platea dictumst.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary readmore">Leia mais</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    </div>
-                </div>
-            </div>
-    </main>
-    <footer>
-        &copy; 2024
-    </footer>
+    <form method="get" >
+        <input type="number" name="num1" placeholder="Enter first number" id="valueA">
+        <input type="number" name="num2" placeholder="Enter second number" id="valueA">
+        <submit>
+    </form>
 </body>
+<script>
+    let url = new URL(window.location.href);
+    let num1 = url.searchParams.get("num1");
+    let num2 = url.searchParams.get("num2");
+    if(num1 && num2){
+        
+    }
+</script>
 </html>

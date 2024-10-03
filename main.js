@@ -1,23 +1,28 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', (event) => {
-       validateInputs();
-    });
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o comportamento padrão de recarregamento da página
+    validateInput();
 });
 
-function validateInputs() {
-    var valueA = document.getElementById("valueA").value;
-    var valueB = document.getElementById("valueB").value;
+function validateInput() {
+    const valueA = document.getElementById('valueA').value;
+    const valueB = document.getElementById('valueB').value;
 
-    if (valueA == "" || valueB == "") {
-        alert("Please fill in all the fields");
+    if (!valueA || !valueB) {
+        alert('Both fields are required.');
+        return false;
+    }
+
+    if (isNaN(valueA) || isNaN(valueB)) {
+        alert('Please enter valid numbers.');
+        return false;
+    }
+
+    if(valueA > valueB)
+    {
+        alert('The first number need to be less than the second number. :(');
         return;
     }
 
-    if(valueB < valueA){
-        alert("Value B need to be greater than Value A");
-        return;
-    }
-    alert("Value A is greater than Value B");
+    alert("The secound number is bigger than the first number. :)");
+    return true;
 }

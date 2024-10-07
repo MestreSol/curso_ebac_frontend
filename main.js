@@ -4,9 +4,10 @@ document.getElementById('form').addEventListener('submit', function(event) {
 });
 
 function validateInput() {
-    const valueA = document.getElementById('valueA').value;
-    const valueB = document.getElementById('valueB').value;
-
+    //Coleta e converte o valor do input em  um Float
+    const valueA = parseFloat(document.getElementById('valueA').value);
+    const valueB = parseFloat(document.getElementById('valueB').value);
+    
     if (!valueA || !valueB) {
         alert('Both fields are required.');
         return false;

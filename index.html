@@ -1,59 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
-    <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="stylesheet" href="dist/css/login.css">
+    <title>Exercício boas práticas de CSS</title>
+    <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-    <div class="container">
-        
-        <div class="split">
-            <div id="login-container" class="left">
-                <div id="login">
-                    <h1>Login</h1>
-                    <form method="post" id="loginForm">
-                        <input type="text" name="username" placeholder="Username" id="username" required>
-                        <input type="password" name="password" placeholder="Password" id="password" required>
-                        <input type="submit" value="Login">
-                        <input type="button" value="Create Account" onclick="return showRegister()">
-                    </form>
-                </div>
-                <div id="register">
-                    <h1>Register</h1>
-                    <form  method="post" id="registerForm">
-                        <input type="text" name="username" placeholder="Username" id="username" required>
-                        <input type="password" name="password" placeholder="Password" id="password" required>
-                        <input type="submit" value="Register">
-                        <input type="button" value="Login" onclick="return showLogin()">
-                    </form>
-                </div>
-                <div class="ErrorArea">
-                    <div class="Error" id="Error">
-                        <p id="ErrorText"></p>
-                    </div>
-                </div>
-            </div>   
-            <div id="side-image" class="side-image right" >
-                <img src="dist/img/MainBefore.png" alt="Agenda">
-            </div>
+    <div class="produtos">
+        <div class="produto">
+            <img class="produto__imagem" src="https://via.placeholder.com/100x100">
+            <h4 class="produto__nome">Nome do produto</h4>
+            <p class="produto__descricao">
+                Descrição do produto
+            </p>
+        </div>
+        <div class="produto--em-destaque">
+            <img class="produto__imagem" src="https://via.placeholder.com/100x100">
+            <h4 class="produto__nome">Nome do produto</h4>
+            <p class="produto__descricao">
+                Descrição do produto
+            </p>
+        </div>
+        <div class="produto">
+            <img class="produto__imagem" src="https://via.placeholder.com/100x100">
+            <h4 class="produto__nome">Nome do produto</h4>
+            <p class="produto__descricao">
+                Descrição do produto
+            </p>
         </div>
     </div>
 </body>
-<script>
-    document.getElementById('register').style.display = 'none';
-
-    function showRegister(){
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('register').style.display = 'block';
-    }
-
-    function showLogin(){
-        document.getElementById('login').style.display = 'block';
-        document.getElementById('register').style.display = 'none';
-    }
-</script>
-<script src="dist/js/login.js"></script>
 </html>

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "grunt": "grunt",
     "less": "lessc source/less/*.less dist/css/style.css",
     "sass": "sass --watch source/:dist/css",
     "gulp": "gulp",
@@ -12,6 +13,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
     "gulp-imagemin": "^9.1.0",
     "gulp-less": "^5.0.0",
     "gulp-sass": "^5.1.0",

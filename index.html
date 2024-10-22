@@ -1,79 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./dist/css/index.css">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/login.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="branding">
-                <img src="https://via.placeholder.com/120x70" />
+    <div class="container">
+        
+        <div class="split">
+            <div id="login-container" class="left">
+                <div id="login">
+                    <h1>Login</h1>
+                    <form method="post" id="loginForm">
+                        <input type="text" name="username" placeholder="Username" id="username" required>
+                        <input type="password" name="password" placeholder="Password" id="password" required>
+                        <input type="submit" value="Login">
+                        <input type="button" value="Create Account" onclick="return showRegister()">
+                    </form>
+                </div>
+                <div id="register">
+                    <h1>Register</h1>
+                    <form  method="post" id="registerForm">
+                        <input type="text" name="username" placeholder="Username" id="username" required>
+                        <input type="password" name="password" placeholder="Password" id="password" required>
+                        <input type="submit" value="Register">
+                        <input type="button" value="Login" onclick="return showLogin()">
+                    </form>
+                </div>
+                <div class="ErrorArea">
+                    <div class="Error" id="Error">
+                        <p id="ErrorText"></p>
+                    </div>
+                </div>
+            </div>   
+            <div id="side-image" class="side-image right" >
+                <img src="dist/img/MainBefore.png" alt="Agenda">
             </div>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="#">Início</a>
-                    </li>
-                    <li>
-                        <a href="#">Produtos</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
-    </header>
-    <section>
-        <div class="container">
-            <h2>Produtos</h2>
-            <ul class="products">
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
+    </div>
 </body>
+<script>
+    document.getElementById('register').style.display = 'none';
+
+    function showRegister(){
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('register').style.display = 'block';
+    }
+
+    function showLogin(){
+        document.getElementById('login').style.display = 'block';
+        document.getElementById('register').style.display = 'none';
+    }
+</script>
+<script src="dist/js/login.js"></script>
 </html>

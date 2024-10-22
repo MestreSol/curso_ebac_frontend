@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "less": "lessc source/less/*.less dist/css/style.css",
     "sass": "sass --watch source/:dist/css",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +13,7 @@
   "description": "",
   "dependencies": {
     "gulp-imagemin": "^9.1.0",
+    "gulp-less": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.80.3"
   },

@@ -1,1 +1,4 @@
 node_modules
+
+lessc .nomedomixin()
+chave-valor#cores[corprincapl]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
+            <h1 class="profile-name">UserName</h1>
+            <h2 class="profile-username">@UserID</h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="repos">repoNumber</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="follows">
+                        followersNumber
+                    </span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="following">
+                        followingNumber
+                    </span>
+                </li>
+            </ul>
+            <a href="https://github.com/MestreSol" class="profile-link">Ver no Github</a>
+        </div>
+    </header>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const profileName = document.querySelector(".profile-name");
+        const profileUsername = document.querySelector(".profile-username");
+        const profileLink = document.querySelector(".profile-link");
+        const profileAvatar = document.querySelector(".profile-avatar");
+
+        const repos = document.querySelector("#repos");
+        const follows = document.querySelector("#follows");
+        const following = document.querySelector("#following");
+
+        fetch("https://api.github.com/users/mestresol")
+            .then(response => response.json())
+            .then(data => {
+                profileName.textContent = data.name;
+                profileUsername.textContent = data.login;
+                profileLink.href = data.html_url;
+                profileAvatar.src = data.avatar_url;
+                repos.textContent = data.public_repos;
+                follows.textContent = data.followers;
+                following.textContent = data.following;
+            });
+    });
+    </script>
+</html>

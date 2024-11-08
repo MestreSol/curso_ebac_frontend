@@ -17,7 +17,7 @@ const alunos = [
 
 ];
 
-const aprovados = alunos.filter(aluno => aluno.nota >= 7);
+const aprovados = alunos.filter(aluno => aluno.nota >= 6);
 
 console.log(aprovados);
 
